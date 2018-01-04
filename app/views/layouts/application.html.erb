@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Workspace</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
+<body>
+  <%= render "layouts/header" %>
+  
+  <%= render "layouts/alerts" %>
+  
+  <div id="main-content" class="row full-min-height">
     <%= yield %>
-  </body>
-</html>
+  </div>
+  
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr><p>&copy; Movie Store 2018</p>
+    </div>
+  </footer>
+  
+  <%= javascript_include_tag "application" %>
+  
+</body>
